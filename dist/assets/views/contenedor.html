@@ -1,3 +1,24 @@
-<div ng-controller="contenedor as cont">
-
+<div ng-controller="contenedor as cont" class="inicio" layout-fill layout-wrap>
+    <div class="encabezado" layout="column" layout-align="center center">
+        <img src="assets/img/logo_aP-blanco.svg" class="logo-aP">
+        <h1 class="titulo">Editor de recursos</h1>
+    </div>
+    <md-content class="md-padding fila-cards" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="50" flex-gt-md="33" layout="column">
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Motor tipo Test</span>
+                        <span class="md-subhead">Crear recursos de preguntas de múltiples respuestas.</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-lg card-media"></div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button ng-href="#test/nuevo">Abrir</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </md-content>
 </div>

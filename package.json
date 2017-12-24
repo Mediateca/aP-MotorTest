@@ -1,12 +1,14 @@
 {
-  "name": "",
-  "author": "",
+  "name": "MotorTest",
+  "author": "Mediateca Soluciones Educativas S.A.S",
   "version": "0.0.1",
-  "description": "",
+  "description": "Motor de generación de preguntas tipo test",
   "dependencies": {
     "angular": "^1.6.4",
     "angular-animate": "^1.6.4",
     "angular-aria": "^1.6.4",
+    "angular-material": "^1.1.5",
+    "angular-messages": "^1.6.8",
     "angular-route": "^1.6.4",
     "grunt": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
@@ -21,14 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/"
+    "url": "git+https://github.com/Mediateca/aP-MotorTest"
   },
   "keywords": [
     ""
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com//issues"
+    "url": "https://github.com/Mediateca/aP-MotorTest/issues"
   },
-  "homepage": "https://github.com//#readme"
+  "homepage": "https://github.com/Mediateca/aP-MotorTest/#readme"
 }

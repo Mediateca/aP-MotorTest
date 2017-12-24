@@ -1,2 +1,19 @@
 @charset "UTF-8";
 // Tipografias
+// Generales
+.inicio {
+    .encabezado {
+        color: #fff;
+        background-color: #00a2ff;
+        height: 33%;
+        .logo-aP {
+            width: 25%;
+            height: auto;
+        }
+    }
+    .fila-cards {
+        .card-media {
+            background-color: #999999;
+        }
+    }
+}

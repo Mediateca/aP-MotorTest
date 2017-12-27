@@ -1,5 +1,8 @@
 @charset "UTF-8";
-// Tipografias
+// Quill Editor
+[ng-quill-editor] {
+    display: block;
+}
 // Generales
 .inicio {
     .encabezado {
@@ -14,6 +17,26 @@
     .fila-cards {
         .card-media {
             background-color: #999999;
+        }
+    }
+}
+
+.test {
+    md-toolbar {
+        background-color: #00a2ff;
+        .logo_aP {
+            width: auto;
+            max-width: auto;
+        }
+    }
+    .abrir {
+        .lista-motores {
+            margin-top: 25px;
+        }
+    }
+    .nuevo {
+        .contenido {
+            margin-top: 25px;
         }
     }
 }

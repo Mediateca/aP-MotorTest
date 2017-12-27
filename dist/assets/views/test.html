@@ -1,5 +1,67 @@
 <div ng-controller="test as ts" class="test" layout-fill layout-wrap>
-    <md-button class="md-fab" aria-label="Nuevo">
-        <md-icon md-svg-icon="plus"></md-icon>
-    </md-button>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="{{ts.volver.aria}}" ng-href="{{ts.volver.accion}}">
+                <md-tooltip md-direction="right">{{ts.volver.aria}}</md-tooltip>
+                <md-icon md-svg-icon="arrow-left"></md-icon>
+            </md-button>
+            <h2 flex md-truncate>Motores tipo test</h2>
+            <md-icon md-svg-src="assets/img/logo_aP-blanco.svg" class="logo_aP" aria-label="aulaPlaneta">
+        </div>
+    </md-toolbar>
+    <div class="abrir" ng-if="ts.accion == 'abrir'">
+        <div class="lista-motores" layout="row" layout-align="start center">
+            <div flex="20" hide-xs hide-sm></div>
+            <md-whiteframe class="md-whiteframe-2dp" flex flex-gt-sm="60" layout-fill>
+                <md-content layout="column" layout-padding>
+                    <md-list flex>
+                        <md-subheader class="md-no-sticky">Recursos desarrollados</md-subheader>
+                        <md-list-item class="md-3-line" ng-href="#test/codigo">
+                            <img ng-src="assets/img/favicon.png" class="md-avatar" alt="avatar" />
+                            <div class="md-list-item-text" layout="column">
+                                <h3>Nombre del recurso</h3>
+                                <h4>Juan Perez - 2018/05/23</h4>
+                                <p>Descripción del recurso</p>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
+            </md-whiteframe>
+            <div flex="20" hide-xs hide-sm></div>
+        </div>
+        <div layout="row" layout-align="end center">
+            <md-button class="md-fab" aria-label="Crear un nuevo recurso" ng-href="#test/nuevo">
+                <md-tooltip md-direction="top">Crear un nuevo recurso</md-tooltip>
+                <md-icon md-svg-icon="plus"></md-icon>
+            </md-button>
+        </div>
+    </div>
+    <div class="nuevo" ng-if="ts.accion == 'nuevo'" layout="row" layout-align="start center">
+        <div flex="20" hide-xs hide-sm></div>
+        <md-whiteframe class="contenido md-whiteframe-2dp" flex flex-gt-sm="60" layout-fill layout="column" layout-padding>
+            <h3>Nuevo recurso tipo test</h3>
+            <div class="titulo" layout="row" layout-align="space-between center">
+                <md-input-container flex="90">
+                    <label>Título</label>
+                    <input ng-model="ts.recurso.titulo" ng-if="!activo">
+                    <ng-quill-editor ng-model="ts.recurso.titulo" placeholder="Título del recurso" ng-if="activo">
+                        <ng-quill-toolbar>
+                            <div id="ng-quill-toolbar">
+                                <span class="ql-formats">
+                                <button class="ql-bold" ng-attr-title="{{'Bold'}}"></button>
+                                <button class="ql-italic" ng-attr-title="{{'Italix'}}"></button>
+                                <button class="ql-formula" ng-attr-title="{{'Formula'}}"></button>
+                            </span>
+                            </div>
+                        </ng-quill-toolbar>
+                    </ng-quill-editor>
+                </md-input-container>
+                <md-switch ng-model="activo" flex="10">
+                    <md-icon md-svg-icon="format-pilcrow"></md-icon>
+                </md-switch>
+            </div>
+        </md-whiteframe>
+        <div flex="20" hide-xs hide-sm></div>
+    </div>
+    <p>{{ts.recurso.titulo}}</p>
 </div>
